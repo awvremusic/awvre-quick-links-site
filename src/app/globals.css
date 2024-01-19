@@ -6,6 +6,25 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-size: 12pt;
+}
+
+@media screen and (min-width: 640px) {
+  :root {
+    font-size: 14pt;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 16pt;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 18pt;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +37,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }

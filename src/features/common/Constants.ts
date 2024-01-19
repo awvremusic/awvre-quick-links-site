@@ -1,0 +1,1 @@
+export const AWVRE_GREEN = "#81E85C";
