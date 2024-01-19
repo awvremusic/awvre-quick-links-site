@@ -19,7 +19,7 @@ export const BaseButton = ({
 }: BaseButtonProps) => {
     return (
         <button
-            className={` disabled:bg-gray-500 text-white font-bold py-2 px-4 rounded ${className ?? ""} grid grid-cols-5 grid-rows-1 gap-4 items-center justify-center w-full`}
+            className={` disabled:bg-gray-500 text-white font-black py-2 px-4 rounded-md ${className ?? ""} grid grid-cols-5 grid-rows-1 gap-4 items-center justify-center w-full`}
             onClick={onClick}
             disabled={disabled}
             style={{ backgroundColor: backgroundColor ?? "blue" }}

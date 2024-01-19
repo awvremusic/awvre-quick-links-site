@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans_JP } from 'next/font/google'
 import './globals.css'
 import AppProviders from '@/features/common/components/AppProviders'
 
-const inter = Inter({ subsets: ['latin'] })
+const notoSansJp = Noto_Sans_JP({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'AWVRE | Quick Links',
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <AppProviders>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={notoSansJp.className}>{children}</body>
       </html>
     </AppProviders>
   )

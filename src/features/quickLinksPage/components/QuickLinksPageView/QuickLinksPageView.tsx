@@ -4,16 +4,16 @@ import { useGetQuickLinksQuery } from "../../ApiSlice"
 import { BaseButton } from "@/features/common/components/form/BaseButton"
 
 const Heading = ({ children, className }: { children: React.ReactNode, className?: string }) => (
-    <h2 className={`${className} text-3xl font-bold`}>{children}</h2>
+    <h2 className={`${className} text-3xl font-bold`} style={{ fontFamily: "Noto Sans JP, sans-serif" }}>{children}</h2>
 )
 
 const Description = ({ children, className }: { children: React.ReactNode, className?: string }) => (
-    <p className={`${className} text-lg`}>{children}</p>
+    <p className={`${className} text-md`} style={{ fontFamily: "Noto Sans JP, sans-serif" }}>{children}</p>
 )
 
 const LatestRelease = ({ children, className }: { children: React.ReactNode, className?: string }) => (
     <div className={`${className} flex flex-col items-center justify-center`}>
-        <Heading className="text-xl">Latest Release</Heading>
+        <Heading className="text-lg">Latest Release</Heading>
         {children}
     </div>
 )
@@ -25,7 +25,7 @@ const MediaLinkView = ({ mediaLink, className }: { mediaLink: MediaLink, classNa
             backgroundColor={mediaLink.linkColor.hex}
             leftComponent={<img src={mediaLink.icon.url} width={25} height={25} alt={`Icon for AWVRE's ${mediaLink.title}`} />}
         >
-            <p className="font-bold">{mediaLink.text ?? mediaLink.title}</p>
+            <p className="font-bold" style={{ fontFamily: "Noto Sans JP, sans-serif" }}>{mediaLink.text ?? mediaLink.title}</p>
         </BaseButton>
     </div>
 )
@@ -61,7 +61,7 @@ export const QuickLinksPageView = () => {
                 className="mt-5 text-center"
             >{data.description}</Description>
             <LatestRelease
-                className="mt-5"
+                className="mt-5 mb-5"
             >
                 <div dangerouslySetInnerHTML={{ __html: data.latestRelease }} className="mt-5"></div>
             </LatestRelease>
