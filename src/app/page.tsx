@@ -1,5 +1,5 @@
 "use client"
-import { Footer } from "@/features/common/components/Footer";
+import { Footer } from "@awvremusic/awvre-ui-web"
 import { useIsMobile } from "@/features/common/hooks/useIsMobile";
 import { QuickLinksPageView } from "@/features/quickLinksPage/components/QuickLinksPageView";
 
